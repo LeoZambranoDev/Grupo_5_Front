@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.content-row-product{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px
+
+}
+
+.content-row-product-name{
+  width: 80%;
+}
+
+.content-row-product-btn{
+  width: 20%;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: rgb(92, 52, 236);
+  border: none;
+  color:white
+}
+
+.fondo-par{
+  background-color: rgb(180, 180, 180);
+  color:white
+}
+.fondo-impar{
+  background-color:  #ffffff;
+}
