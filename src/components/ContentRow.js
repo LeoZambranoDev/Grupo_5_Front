@@ -50,31 +50,39 @@ export default function ContentRow() {
     let [brands, setBrands] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3001/user/api/list')
+        fetch('/user/api/list')
             .then(x => {
-                x.json()
-                console.log(x);
+                return x.json()
             })
             .then(x => {
-                setUsers(x)
-                // console.log(x)
-            }).catch(x => console.log(x))
-        // fetch('/product/api/list').then(x=>x.json()).then(x=>setProducts(x));
-        // fetch('/api/brand').then(x=>x.json()).then(x=>setBrands(x));
+                setUsers(x.data)
+            })
+            .catch(x => console.log(x))
+        fetch('/product/api/list')
+            .then(x => {
+                return x.json()
+            })
+            .then(x => {
+                setProducts(x.data)
+            })
+            .catch(x => console.log(x))
+            fetch('/api/brands')
+            .then(x => {
+                return x.json()
+            })
+            .then(x => {
+                setBrands(x)
+            })
+            .catch(x => console.log(x))
     }, [])
-
-    // let users= await fetch('/user/api/list').then(x=>x.json());
-    // let products= await fetch('/product/api/list').then(x=>x.json());
-    // let brands= await fetch('/api/brand').then(x=>x.json());
-
 
     return (
 
         <div className="row">
 
-            <SmallCard cuantity={3} title={'Total Usuarios'} color={'warning'} icon={'fa-user-check'} key={0} />
-            <SmallCard cuantity={3} title={'Total Productos'} color={'primary'} icon={'fa-user-check'} key={1} />
-            <SmallCard cuantity={3} title={'Total Marcas'} color={'success'} icon={'fa-award'} key={2} />
+            <SmallCard cuantity={users.length} title={'Total Usuarios'} color={'warning'} icon={'fa-user-check'} key={0} />
+            <SmallCard cuantity={products.length} title={'Total Productos'} color={'primary'} icon={'fa-user-check'} key={1} />
+            <SmallCard cuantity={brands.length} title={'Total Marcas'} color={'success'} icon={'fa-award'} key={2} />
 
         </div>
     )
