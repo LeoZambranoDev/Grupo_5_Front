@@ -43,3 +43,24 @@ code {
 .fondo-impar{
   background-color:  #ffffff;
 }
+.brandsTable{
+
+  width: 50%;
+  margin: auto;
+  font-size: 30px;
+  border: 1px solid black;
+
+
+
+  
+}
+.column-brand{
+  text-align: center;
+
+}
+.titleBrand {
+  font-size: 35px;
+  background-color: rgb(58, 188, 188);
+  color: #ffffff;
+  text-align: center;
+}

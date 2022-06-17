@@ -15,22 +15,24 @@ function BrandsInDb() {
       .catch(err => console.log(err));
   }, []);
   return (
+   
     <>
-      <table>
+      <table className="brandsTable">
 
 
         <thead>
-          <tr>
+          <tr className="titleBrand">
             <th>Marca</th>
             <th>Cantidad</th>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody >
           
           {brands && brands.map((brand, i) => {
             return (
-              <BrandRow key={i} nombre={brand.name} cuantity={brand.products.length} />
+
+              <BrandRow key={i} nombre={brand.name} fondo={i%2==0?'par':'impar'} cuantity={brand.products.length} />
             )
           })
           }

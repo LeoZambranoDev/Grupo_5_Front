@@ -1,7 +1,7 @@
 import React from 'react';
 import ChartRow from './ChartRow';
-
-let tableRowsData = [
+import { useState, useEffect } from 'react';
+/*let tableRowsData = [
     {
         Title: 'Billy Elliot ',
         Length: '123',
@@ -18,9 +18,22 @@ let tableRowsData = [
     },
     
 ]
+*/
 
 
 function Chart (){
+    let [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('/product/api/list')
+        .then(res => res.json())
+        .then(data => {
+            setProducts(data.data)
+        }
+        )
+        .catch(err => console.log(err));
+    }, []);
+
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -29,28 +42,27 @@ function Chart (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Marca</th>
+                                
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                            <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Marca</th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            {
-                            tableRowsData.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
-                            })
-                            }
+                        {products && products.map((product, i) => {
+            return (
+
+              <ChartRow key={i} name={product.name} price={product.price} brand={product.brand} />
+            )
+          })
+          }
 
                         </tbody>
                     </table>
