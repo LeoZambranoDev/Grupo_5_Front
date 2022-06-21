@@ -12,7 +12,7 @@ function App() {
     <div id="wrapper">
       <SideBar />
       <Routes>
-        <Route exact path="/" element={ <ContentWrapper />} />
+        <Route exact path="/" element={<ContentWrapper />} />
         <Route path="/BrandsInDb" element={<BrandsInDb />} />
         <Route path="/LastMovieInDb" element={<LastProductInDb />} />
         <Route path="/ContentRow" element={<ContentRow />} />

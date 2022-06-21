@@ -48,11 +48,8 @@ code {
   width: 50%;
   margin: auto;
   font-size: 30px;
-  border: 1px solid black;
-
-
-
-  
+  border: 1px solid #3B85B2;
+ 
 }
 .column-brand{
   text-align: center;
@@ -60,7 +57,23 @@ code {
 }
 .titleBrand {
   font-size: 35px;
-  background-color: rgb(58, 188, 188);
+  background-color: #3B85B2;
   color: #ffffff;
   text-align: center;
+}
+.chart {
+  width: 80%;
+  margin: auto;
+  font-size: 30px;
+  
+ 
+}
+.chart th, tr {
+  text-align: left;
+  padding: 8px;
+}
+.chart tr:nth-child(even) {background-color: #d9ecf8;}
+.chart th {
+  background-color: #3B85B2;
+  color: white;
 }
