@@ -24,7 +24,7 @@ function LastProductInDb(){
                 { productsMostViewed && 
                     productsMostViewed.map((product,i) => (
                           
-                        <RowProduct name={product.name} fondo={i%2==0?'par':'impar'} key={i} />
+                        <RowProduct name={product.name} id={product.id} fondo={i%2==0?'par':'impar'} key={i} />
                          
                     ))
                 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import ProductDetails from './ProductDetails'
+import { Link } from 'react-router-dom'
 
 export default function RowProduct(props) {
     return (
@@ -6,7 +8,10 @@ export default function RowProduct(props) {
             <div className="content-row-product-name">
                 {props.name}
             </div>
-            <button className='content-row-product-btn'>Ver más</button>
+            <Link  to = {`/ProductDetails/${props.id}`} className='content-row-product-btn'>Ver más</Link>
+            
+            
+            
         </div>
     )
 }

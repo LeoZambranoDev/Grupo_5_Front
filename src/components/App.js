@@ -6,6 +6,7 @@ import LastProductInDb from './LastProductInDb';
 import ContentRow from './ContentRow';
 import SearchMovies from './SearchMovies';
 import Chart from './Chart';
+import ProductDetails from './ProductDetails'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/ContentRow" element={<ContentRow />} />
         <Route path="/SearchMovies" element={<SearchMovies />} />
         <Route path="/Chart" element={<Chart />} />
+        <Route path="/ProductDetails/:id" element={<ProductDetails />} />
         {/* <Route component={NotFound} /> */}
       </Routes>
     </div>
