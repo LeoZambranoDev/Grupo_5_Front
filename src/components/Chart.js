@@ -33,8 +33,8 @@ function Chart (){
                         <tfoot>
                             <tr>
                             <th>Nombre</th>
-                                <th>Precio</th>
                                 <th>Marca</th>
+                                <th>Precio</th>
                             </tr>
                         </tfoot>
                         <tbody>

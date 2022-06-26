@@ -20,17 +20,19 @@ function ProductDetails() {
     return (
         <React.Fragment>
             {details && <>
+                <div className="detailProduct">
                 <div className="detailImage">
                     <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={`http://localhost:3001/img/products/${details.image}`} />
                 </div>
                 <ul className="detailsTable">
-                    <li>{details.price}</li>
-                    <li>{details?.brand?.name}</li>
-                    <li>{details?.memory?.name}</li>
-                    <li>{details?.ram?.name}</li>
+                    Precio:<li> ${details.price}</li>
+                    Marca: <li>{details?.brand?.name}</li>
+                    Memoria: <li>{details?.memory?.name}</li>
+                    Ram: <li>{details?.ram?.name}</li>
 
 
                 </ul>
+                </div>
             </>}
         </React.Fragment>
     )

@@ -2,46 +2,6 @@ import React from 'react';
 import SmallCard from './SmallCard';
 import { useState, useEffect } from 'react';
 
-/*  Cada set de datos es un objeto literal */
-
-/* <!-- Movies in DB --> */
-
-// let moviesInDB = {
-//     title: 'Movies in Data Base',
-//     color: 'primary', 
-//     cuantity: 21,
-//     icon: 'fa-clipboard-list'
-// }
-
-// /* <!-- Total awards --> */
-
-// let totalAwards = {
-//     title:' Total awards', 
-//     color:'success', 
-//     cuantity: '79',
-//     icon:'fa-award'
-// }
-
-// /* <!-- Actors quantity --> */
-
-// let actorsQuantity = {
-//     title:'Actors quantity' ,
-//     color:'warning',
-//     cuantity:'49',
-//     icon:'fa-user-check'
-// }
-
-// let cartProps = [moviesInDB, totalAwards, actorsQuantity];
-
-
-// const getUser = async () => {
-//     let users= await fetch('/user/api/list').then(x=>x.json());
-//     console.log(users);
-//     return users;
-// }
-
-
-
 
 export default function ContentRow() {
 
@@ -81,8 +41,8 @@ export default function ContentRow() {
         <div className="row">
 
             <SmallCard cuantity={users.length} title={'Total Usuarios'} color={'warning'} icon={'fa-user-check'} key={0} />
-            <SmallCard cuantity={products.length} title={'Total Productos'} color={'primary'} icon={'fa-user-check'} key={1} />
-            <SmallCard cuantity={brands.length} title={'Total Marcas'} color={'success'} icon={'fa-award'} key={2} />
+            <SmallCard cuantity={products.length} title={'Total Productos'} color={'primary'} icon={'fa-mobile-screen'} key={1} />
+            <SmallCard cuantity={brands.length} title={'Total Marcas'} color={'success'} icon={'fa-table-list'} key={2} />
 
         </div>
     )
